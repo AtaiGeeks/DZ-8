@@ -1,0 +1,67 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0b0c10;
+  color: white;
+  text-align: center;
+}
+
+nav {
+  background: #1f2833;
+  padding: 15px;
+}
+
+nav a {
+  color: #66fcf1;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header {
+  margin-top: 30px;
+}
+
+.selection {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+#character {
+  width: 300px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+.weapons img {
+  width: 150px;
+  margin: 10px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.weapons img:hover {
+  transform: scale(1.1);
+  border-color: #66fcf1;
+}
+
+#chosen-weapon {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #45a29e;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
